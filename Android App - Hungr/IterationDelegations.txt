@@ -1,0 +1,9 @@
+1st Iteration
+--------------
+Kyle - API implementation
+Syed - 'Get Recommendation Story' implementation
+Kyle - 'Get Another Recommendation Story' implementation
+Conner - 'Google OAuth Story' implementation
+Eric - Test code for all iteration implementations
+
+Note: Document ALL code taken from outside sources (Yelp API implementation, PageSlider, etc..) with the source
