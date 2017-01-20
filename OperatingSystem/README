@@ -1,3 +1,20 @@
 Simulation of OS
 
-Run using testing.txt
+To run the project navigate to the src folder in the terminal/command line
+
+compile the project using the following (although project is precompiled in file a.out)
+
+g++ main.cpp Pcb.cpp ProcessStates.cpp Dispatcher.cpp FileGenerator.cpp
+
+once compiled, run with the following command
+
+./a.out
+
+The program will ask if you will like to generate a new input file (used mostly for test cases)
+If said no, then provide the input file in the correct format and input total number of processes
+
+Next, the program will ask how many processes (tasks) will you like the generate if said yes to previous question
+
+Either watch how the processes are handled in each iteration using Round Robin Algorithm or hit a single non 1 number to proceed manually
+
+
