@@ -3,7 +3,7 @@ A massive collection of data on which a destructive algorithm runs to show highl
 
 Please refer to SocialNetworkAnalysis.docx for full detail on Analysis and project approach 
 
-In the interations.jpg file, each image under original is the original copy of the data set loaded into gephi and each corresponding test from 1-5 are resulting images loaded into Gephi after running a java program to itertively destroy capital nodes/
+In the interationsJPG.jpg file, each image under original is the original copy of the data set loaded into gephi and each corresponding test from 1-5 are resulting images loaded into Gephi after running a java program to itertively destroy capital nodes/
 
 Citations:
 [4]
