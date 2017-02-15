@@ -14,7 +14,8 @@
 		9B45848E1E44FBE00056B698 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B45848C1E44FBE00056B698 /* LaunchScreen.storyboard */; };
 		9B4584991E44FBE00056B698 /* A1Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4584981E44FBE00056B698 /* A1Tests.swift */; };
 		9B4584A41E44FBE00056B698 /* A1UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4584A31E44FBE00056B698 /* A1UITests.swift */; };
-		9B8238991E4CCE3600775E4F /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B8238981E4CCE3600775E4F /* Storyboard.storyboard */; };
+		9B6150B31E5361360017F1CD /* beyond.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9B6150B21E5361360017F1CD /* beyond.ttf */; };
+		9B6150B61E5363E50017F1CD /* LUCKY.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9B6150B51E5363E50017F1CD /* LUCKY.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,7 +49,9 @@
 		9B45849F1E44FBE00056B698 /* A1UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = A1UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B4584A31E44FBE00056B698 /* A1UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = A1UITests.swift; sourceTree = "<group>"; };
 		9B4584A51E44FBE00056B698 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9B8238981E4CCE3600775E4F /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Storyboard.storyboard; path = ../../testingA1/Storyboard.storyboard; sourceTree = "<group>"; };
+		9B6150B21E5361360017F1CD /* beyond.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = beyond.ttf; sourceTree = "<group>"; };
+		9B6150B41E53632C0017F1CD /* curious.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = curious.ttf; sourceTree = "<group>"; };
+		9B6150B51E5363E50017F1CD /* LUCKY.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = LUCKY.ttf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,7 +82,6 @@
 		9B4584771E44FBE00056B698 = {
 			isa = PBXGroup;
 			children = (
-				9B8238981E4CCE3600775E4F /* Storyboard.storyboard */,
 				9B4584821E44FBE00056B698 /* A1 */,
 				9B4584971E44FBE00056B698 /* A1Tests */,
 				9B4584A21E44FBE00056B698 /* A1UITests */,
@@ -106,6 +108,9 @@
 				9B45848A1E44FBE00056B698 /* Assets.xcassets */,
 				9B45848C1E44FBE00056B698 /* LaunchScreen.storyboard */,
 				9B45848F1E44FBE00056B698 /* Info.plist */,
+				9B6150B21E5361360017F1CD /* beyond.ttf */,
+				9B6150B41E53632C0017F1CD /* curious.ttf */,
+				9B6150B51E5363E50017F1CD /* LUCKY.ttf */,
 			);
 			path = A1;
 			sourceTree = "<group>";
@@ -238,8 +243,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B6150B61E5363E50017F1CD /* LUCKY.ttf in Resources */,
 				9B45848E1E44FBE00056B698 /* LaunchScreen.storyboard in Resources */,
-				9B8238991E4CCE3600775E4F /* Storyboard.storyboard in Resources */,
+				9B6150B31E5361360017F1CD /* beyond.ttf in Resources */,
 				9B45848B1E44FBE00056B698 /* Assets.xcassets in Resources */,
 				9B4584891E44FBE00056B698 /* Main.storyboard in Resources */,
 			);
@@ -419,10 +425,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 8B4QBLLSCD;
 				INFOPLIST_FILE = A1/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.SyedRizvi.A1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -432,10 +440,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 8B4QBLLSCD;
 				INFOPLIST_FILE = A1/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.SyedRizvi.A1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
