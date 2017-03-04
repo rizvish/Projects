@@ -8,11 +8,6 @@
 
 import UIKit
 
-//var totalAmounts: Double = 0.0
-//var totalItems1: Double = 0.0
-//var NSdateAndTime = Date()
-
-
 class CartViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var tableView2: UITableView!
@@ -21,27 +16,16 @@ class CartViewController: UIViewController, UITableViewDelegate, UITableViewData
     @IBOutlet weak var paymentFinal: UIButton!
     
     var productPrice02: Double = 0.0
-    
-    var cartArray = ["Grocery", "Movies", "Garden"]
-    //var cartArray: [String] = []
-    
     var cartSectionName: String!
     var cartItemForEachSection: [String]! = []
-//  var priceForEachItem: [Double]! = []
     var priceForEachItem: [Double] = []
     var countForEachItem: Double = 0.0
-//    var totalAmounts: Double!
-//    var totalItems1: Double = 0.0
-        var totalAmounts1: Double = 0.0
-        var totalItems2: Double = 0.0
-//    var NSdateAndTime1: Date? = nil
+    var totalAmounts1: Double = 0.0
+    var totalItems2: Double = 0.0
 
     var ArraycountForEachItem: [Double]  = []
     
     override func viewDidAppear(_ animated: Bool) {
-//        totalAmounts = totalAmounts1
-//        totalItems1 = totalItems2
-//        NSdateAndTime = NSdateAndTime1
         tableView2.reloadData()
 
     }
@@ -53,12 +37,10 @@ class CartViewController: UIViewController, UITableViewDelegate, UITableViewData
         if(ArraycountForEachItem.count != 0)
         {
             priceForEachItem.removeAll()
-            print(ArraycountForEachItem)
             ArraycountForEachItemView.removeAll()
-            print(ArraycountForEachItem)
       
         let alert0 = UIAlertController(title: "Shopping Cart", message: "Your cart has been emptied", preferredStyle: .alert)
-//                 alert0.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+//          alert0.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
             alert0.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: { action in self.performSegue(withIdentifier: "cartToItems", sender: self)
             }))
             
@@ -79,7 +61,6 @@ class CartViewController: UIViewController, UITableViewDelegate, UITableViewData
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        print("ARRAYCOUNTCART:::", ArraycountForEachItem)
         print("ArrayProductPrice",ArraycountForEachItem)
         if(!priceForEachItem.isEmpty )
         {
@@ -87,12 +68,11 @@ class CartViewController: UIViewController, UITableViewDelegate, UITableViewData
         tableView2.dataSource = self
         
         tableView2.reloadData()
-        // Do any additional setup after loading the view.
         }
         else
         {
             let alert0 = UIAlertController(title: "Error", message: "Cart has no values", preferredStyle: .alert)
-//            alert0.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+//          alert0.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
             alert0.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler:{ action in self.performSegue(withIdentifier: "cartToItems", sender: self)
             }))
             self.present(alert0, animated: true, completion: nil)
@@ -110,10 +90,6 @@ class CartViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        print("PRICEFOREachitemmeme:", priceForEachItem)
-
-        
-        
         let cell = tableView2.dequeueReusableCell(withIdentifier: "cartCell", for: indexPath) as! CartTableViewCell
         if(ArraycountForEachItemView.count != 0){
             
@@ -126,21 +102,20 @@ class CartViewController: UIViewController, UITableViewDelegate, UITableViewData
             
         cell.increaseProductButton.tag = indexPath.row
             
-
         }
         else
         {
             let alert0 = UIAlertController(title: "Error: Go Back or to home", message: "Please add items to cart in order to checkout", preferredStyle: .alert)
-//                 alert0.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+//          alert0.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
             alert0.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler:{ action in self.performSegue(withIdentifier: "cartToItems", sender: self)
             }))
             
                 self.present(alert0, animated: true, completion: nil)
         }
-    
-        
         return cell
     }
+    
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toRecent"
         {
@@ -149,8 +124,6 @@ class CartViewController: UIViewController, UITableViewDelegate, UITableViewData
             recentVC.totalItems = totalItems2
             let NSdateAndTime1 = Date()
             recentVC.dateAndTime = NSdateAndTime1
-    
-            
         }
         
     }
@@ -160,11 +133,6 @@ class CartViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     @IBAction func paymentButton(_ sender: Any) {
-        
-//        let cell = CartTableViewCell()
-////      cell.countProductsLabel.text = " "
-////      cell.productLabelText.text = " "
-//        cell.subTotalLabel?.text = " "
 
         tableView2.reloadData()
         let alert = UIAlertController(title: "PAYMENT", message: "Your card will be charged $\(round(totalAmounts1*100)/100)", preferredStyle: UIAlertControllerStyle.alert)

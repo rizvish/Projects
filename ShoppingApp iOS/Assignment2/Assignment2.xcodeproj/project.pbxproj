@@ -16,7 +16,6 @@
 		9B5C0BE41E5E43FD00AD147D /* Assignment2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5C0BE31E5E43FD00AD147D /* Assignment2Tests.swift */; };
 		9B5C0BEF1E5E43FD00AD147D /* Assignment2UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5C0BEE1E5E43FD00AD147D /* Assignment2UITests.swift */; };
 		9B5C0BFD1E5E70D000AD147D /* ItemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5C0BFC1E5E70D000AD147D /* ItemCollectionViewCell.swift */; };
-		9B5C0C011E610B5E00AD147D /* ItemTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5C0C001E610B5E00AD147D /* ItemTableViewController.swift */; };
 		9B5C0C091E61362A00AD147D /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5C0C081E61362A00AD147D /* TableViewCell.swift */; };
 		9B5C0C0B1E6228B000AD147D /* ProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5C0C0A1E6228B000AD147D /* ProductViewController.swift */; };
 		9B5C0C0D1E62687D00AD147D /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5C0C0C1E62687D00AD147D /* CartViewController.swift */; };
@@ -61,7 +60,6 @@
 		9B5C0BEE1E5E43FD00AD147D /* Assignment2UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assignment2UITests.swift; sourceTree = "<group>"; };
 		9B5C0BF01E5E43FD00AD147D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9B5C0BFC1E5E70D000AD147D /* ItemCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemCollectionViewCell.swift; sourceTree = "<group>"; };
-		9B5C0C001E610B5E00AD147D /* ItemTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemTableViewController.swift; sourceTree = "<group>"; };
 		9B5C0C081E61362A00AD147D /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		9B5C0C0A1E6228B000AD147D /* ProductViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductViewController.swift; sourceTree = "<group>"; };
 		9B5C0C0C1E62687D00AD147D /* CartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
@@ -128,7 +126,6 @@
 				9B5C0BD51E5E43FD00AD147D /* Assets.xcassets */,
 				9B5C0BD71E5E43FD00AD147D /* LaunchScreen.storyboard */,
 				9B5C0BDA1E5E43FD00AD147D /* Info.plist */,
-				9B5C0C001E610B5E00AD147D /* ItemTableViewController.swift */,
 				9B5C0C081E61362A00AD147D /* TableViewCell.swift */,
 				9B5C0C0A1E6228B000AD147D /* ProductViewController.swift */,
 				9B5C0C0C1E62687D00AD147D /* CartViewController.swift */,
@@ -309,7 +306,6 @@
 				9B9A4F731E6517C60094AFD4 /* RecentTableViewCell.swift in Sources */,
 				9B5C0BD11E5E43FD00AD147D /* ViewController.swift in Sources */,
 				9B9A4F7B1E677DA20094AFD4 /* cartCollectionViewCell.swift in Sources */,
-				9B5C0C011E610B5E00AD147D /* ItemTableViewController.swift in Sources */,
 				9B5C0BCF1E5E43FD00AD147D /* AppDelegate.swift in Sources */,
 				9B9A4F711E6392E90094AFD4 /* CartTableViewCell.swift in Sources */,
 			);

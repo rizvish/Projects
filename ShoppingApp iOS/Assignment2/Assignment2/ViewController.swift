@@ -21,8 +21,6 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         var productImageOb: [UIImage]!
         var productPriceOb: [Double]
         var productDescriptionOb: [String]
-        
-        
     }
 
     var itemArray = [itemObject]()
@@ -100,10 +98,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             
            cell2.cartButton.setTitle("Shopping Cart", for: .normal)
            cell2.cartImage.image = UIImage(named: "IScart")
-          
-        // cell2.cartButton.tag = indexPath.item
-        //cell2.cartButton.addTarget(self, action: #selector(ViewController.didGoToRecent), for: .touchUpInside)
-          
+        
             return cell2
             
         }
@@ -127,10 +122,6 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         self.performSegue(withIdentifier: "toProduct", sender: sender)
     }
     
-//    func didGoToRecent(sender: UIButton){
-//        self.performSegue(withIdentifier: "homeToRecent", sender: sender)
-//    }
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toProduct"
         {
@@ -144,25 +135,5 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             productVC.productDescription = itemArray[sender.tag].productDescriptionOb
             productVC.PricePerRow1 = getGlobal
         }
-//        else if segue.identifier == "toRecent"
-//        {
-//          //  let sender = sender as! UIButton
-//            let recentVC = segue.destination as! RecentViewController
-//           // recentVC.sum = totalAmounts
-//          //  recentVC.itemCount = totalItems1
-//       //     let NSdateAndTime = Date()
-//        //    recentVC.dateAndTime = NSdateAndTime
-//        
-//            
-//        }
-//        else if segue.identifier == "homeToCart"
-//        {
-//            let sender = sender as! UIButton
-//            let cartVC = segue.destination as! CartViewController
-//            
-//            cartVC.ArraycountForEachItem = [ArraycountForEachItemView[sender.tag]]
-//        }
-
-
 }
 }

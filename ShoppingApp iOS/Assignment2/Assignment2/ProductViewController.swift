@@ -78,15 +78,12 @@ class ProductViewController: UIViewController, UITableViewDelegate, UITableViewD
     {
         let buttonRow = sender.tag
         let buttonRow1 = sender.superview?.superview as! TableViewCell
-        
-   //     let productPerRow1 = buttonRow1.itemTitle.text
-   //     productPerRow.append(productPerRow1!)
+
         print("The price of item in ", buttonRow, "is", buttonRow1.itemPrice.text!)
         
         PricePerRow3 = (Double(buttonRow1.itemPrice.text!))
         print(PricePerRow3)
         
-      //  PricePerRow1.append(round(PricePerRow3!*1000)/1000)
         ArraycountForEachItemView.append(round(PricePerRow3!*1000)/1000)
 
         print("The subTotal is:", ArraycountForEachItemView)
@@ -120,18 +117,11 @@ class ProductViewController: UIViewController, UITableViewDelegate, UITableViewD
             cartVC.priceForEachItem = productPrice
             print("PRODUCT PRICE", productPrice)
             
-          //  cartVC.ArraycountForEachItem = PricePerRow1
-            
             print("ARRAYCOUNTSEGUEVIEW", ArraycountForEachItemView)
              cartVC.ArraycountForEachItem = ArraycountForEachItemView
 
             cartVC.totalAmounts1 = sum
             cartVC.totalItems2 = Double(ArraycountForEachItemView.count)
-            
-            print("PRICEPERROW", PricePerRow1)
-          // cartVC.countForEachItem = PricePerRow
-         //   cartVC.ArraycountForEachItem = productPriceCart
-          //  cartVC.countForEachItem =
         }
     
     }

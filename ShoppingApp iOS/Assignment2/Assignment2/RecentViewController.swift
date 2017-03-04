@@ -11,20 +11,6 @@ import UIKit
 
 class RecentViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
-//    struct totalAndItems
-//    {
-//        var totalAmountOb: Double = 0.0
-//        var totalItemsOb: Double = 0.0
-//        var dateAndTimeOb: NSDate? = nil
-//    }
-//    
-//    struct globalRecentStruct
-//    {
-//        var sumOB: Double = 0.0
-//        var itemCountOb: Double = 0.0
-//        var dateAndTimeOb: NSDate? = nil
-//
-//    }
     @IBOutlet weak var tableView3: UITableView!
     
     var sum: Double = 0.0
@@ -37,44 +23,24 @@ class RecentViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     var dateAndTime = Date()
  //   var dateAndTime: Date? = nil
-
-    
-//    var totalArray = [totalAndItems]()
-
-   // var totalArray1 = [globalRecentStruct]()
-    
-
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-    //    saveRecent.totalArray1.sort{$0.dateAndTimeOb! < $1.dateAndTimeOb!}
-
         tableView3.delegate = self
         tableView3.dataSource = self
         
-        
-         //totalArray1.append(globalRecentStruct(sumOB: sum, itemCountOb: itemCount))
-        
-            self.navigationItem.rightBarButtonItem = self.editButtonItem
-        
-                itemCount = Double(ArraycountForEachItemView.count)
-      //  saveRecent.totalArray1.append(globalRecentStruct(sumOB: sum, itemCountOb: itemCount, dateAndTimeOb: dateAndTime))
 
-  //      saveRecent.totalArray1.append(saveRecent.globalRecentStruct(sumOB: sum, itemCountOb: itemCount, dateAndTimeOb: dateAndTime))
-                //totalArray.append(totalAndItems(totalAmountOb: totalAmount, totalItemsOb: totalItems, dateAndTimeOb: dateAndTime))
+        self.navigationItem.rightBarButtonItem = self.editButtonItem
         
+        itemCount = Double(ArraycountForEachItemView.count)
         
         sum = ArraycountForEachItemView.reduce(0, +)
         itemCount = Double(ArraycountForEachItemView.count)
 
-        
         saveRecent.totalArray1.append(saveRecent.globalRecentStruct(sumOB: sum, itemCountOb: itemCount, dateAndTimeOb: dateAndTime))
         
        // saveRecent.totalArray1.sort{$0.dateAndTimeOb! > $1.dateAndTimeOb!}
-
-     
-
     }
     
     override func viewDidAppear(_ animated: Bool) {
