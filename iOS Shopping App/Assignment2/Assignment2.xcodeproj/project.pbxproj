@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9B450AFE1E6A1ED000D95449 /* saveRecent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B450AFD1E6A1ED000D95449 /* saveRecent.swift */; };
 		9B5C0BCF1E5E43FD00AD147D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5C0BCE1E5E43FD00AD147D /* AppDelegate.swift */; };
 		9B5C0BD11E5E43FD00AD147D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5C0BD01E5E43FD00AD147D /* ViewController.swift */; };
 		9B5C0BD41E5E43FD00AD147D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B5C0BD21E5E43FD00AD147D /* Main.storyboard */; };
@@ -24,6 +25,7 @@
 		9B9A4F751E6517E90094AFD4 /* RecentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B9A4F741E6517E90094AFD4 /* RecentViewController.swift */; };
 		9B9A4F771E675C770094AFD4 /* recentOrdersCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B9A4F761E675C770094AFD4 /* recentOrdersCollectionViewCell.swift */; };
 		9B9A4F7B1E677DA20094AFD4 /* cartCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B9A4F7A1E677DA20094AFD4 /* cartCollectionViewCell.swift */; };
+		9B9A4F831E68CCDC0094AFD4 /* itemArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B9A4F821E68CCDC0094AFD4 /* itemArray.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +46,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9B450AFD1E6A1ED000D95449 /* saveRecent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = saveRecent.swift; sourceTree = "<group>"; };
 		9B5C0BCB1E5E43FD00AD147D /* Assignment2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Assignment2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B5C0BCE1E5E43FD00AD147D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9B5C0BD01E5E43FD00AD147D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -67,6 +70,7 @@
 		9B9A4F741E6517E90094AFD4 /* RecentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecentViewController.swift; sourceTree = "<group>"; };
 		9B9A4F761E675C770094AFD4 /* recentOrdersCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = recentOrdersCollectionViewCell.swift; sourceTree = "<group>"; };
 		9B9A4F7A1E677DA20094AFD4 /* cartCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cartCollectionViewCell.swift; sourceTree = "<group>"; };
+		9B9A4F821E68CCDC0094AFD4 /* itemArray.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = itemArray.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +137,8 @@
 				9B9A4F741E6517E90094AFD4 /* RecentViewController.swift */,
 				9B9A4F761E675C770094AFD4 /* recentOrdersCollectionViewCell.swift */,
 				9B9A4F7A1E677DA20094AFD4 /* cartCollectionViewCell.swift */,
+				9B9A4F821E68CCDC0094AFD4 /* itemArray.swift */,
+				9B450AFD1E6A1ED000D95449 /* saveRecent.swift */,
 			);
 			path = Assignment2;
 			sourceTree = "<group>";
@@ -294,10 +300,12 @@
 			files = (
 				9B9A4F771E675C770094AFD4 /* recentOrdersCollectionViewCell.swift in Sources */,
 				9B5C0C0B1E6228B000AD147D /* ProductViewController.swift in Sources */,
+				9B9A4F831E68CCDC0094AFD4 /* itemArray.swift in Sources */,
 				9B9A4F751E6517E90094AFD4 /* RecentViewController.swift in Sources */,
 				9B5C0C091E61362A00AD147D /* TableViewCell.swift in Sources */,
 				9B5C0C0D1E62687D00AD147D /* CartViewController.swift in Sources */,
 				9B5C0BFD1E5E70D000AD147D /* ItemCollectionViewCell.swift in Sources */,
+				9B450AFE1E6A1ED000D95449 /* saveRecent.swift in Sources */,
 				9B9A4F731E6517C60094AFD4 /* RecentTableViewCell.swift in Sources */,
 				9B5C0BD11E5E43FD00AD147D /* ViewController.swift in Sources */,
 				9B9A4F7B1E677DA20094AFD4 /* cartCollectionViewCell.swift in Sources */,

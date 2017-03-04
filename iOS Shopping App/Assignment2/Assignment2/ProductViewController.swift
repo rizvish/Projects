@@ -15,7 +15,7 @@ class ProductViewController: UIViewController, UITableViewDelegate, UITableViewD
     @IBOutlet weak var numberofItems: UILabel!
     var productDescription: [String] = []
     var productImage: [UIImage]!
-    var productTitle: [String]!
+    var productTitle: [String] = []
     
     @IBOutlet weak var udj: UINavigationItem!
     var productPriceCart: [Double] = []
@@ -27,6 +27,10 @@ class ProductViewController: UIViewController, UITableViewDelegate, UITableViewD
     var PriceArrayRow: [Double]!
     var sum: Double = 0.0
     
+    var productPerRow: [String] = []
+    
+    var emptyArray: [Double] = []
+    
     var PricePerRow3: Double!
     @IBOutlet weak var cartFromCategory: UIButton!
     
@@ -37,6 +41,8 @@ class ProductViewController: UIViewController, UITableViewDelegate, UITableViewD
         tableView1.dataSource = self
         
         self.title = productType
+        
+        tableView1.reloadData()
         
     }
     override func viewWillAppear(_ animated: Bool) {
@@ -54,8 +60,7 @@ class ProductViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        let cell = tableView.dequeueReusableCell(withIdentifier: "productCell", for: indexPath) as! ProductsTableViewCell
-//        
+        
         let cell = tableView1.dequeueReusableCell(withIdentifier: "productCell", for: indexPath) as! TableViewCell
         
         cell.itemTitle.text = productTitle[indexPath.row]
@@ -65,11 +70,8 @@ class ProductViewController: UIViewController, UITableViewDelegate, UITableViewD
         
         cell.itemAddButton.tag = indexPath.row
         cell.itemAddButton.addTarget(self, action: #selector(ProductViewController.addItemButton), for: .touchUpInside)
-         //   PricePerRow1.append(productPrice[indexPath.row])
         productPriceCart = [productPrice[indexPath.row]]
             return cell
-        
-        
     }
     
     func addItemButton(sender: UIButton)
@@ -77,29 +79,22 @@ class ProductViewController: UIViewController, UITableViewDelegate, UITableViewD
         let buttonRow = sender.tag
         let buttonRow1 = sender.superview?.superview as! TableViewCell
         
+   //     let productPerRow1 = buttonRow1.itemTitle.text
+   //     productPerRow.append(productPerRow1!)
         print("The price of item in ", buttonRow, "is", buttonRow1.itemPrice.text!)
-        
-    
-    //    PricePerRow = Double(buttonRow1.itemPrice.text!)
-        
-     //  PriceArrayRow.append(2.39)
-       // print(PricePerRow)
         
         PricePerRow3 = (Double(buttonRow1.itemPrice.text!))
         print(PricePerRow3)
-//        
-//      PricePerRow.append(PricePerRow3)
-
-//      print(PricePerRow!)
         
-        PricePerRow1.append(round(PricePerRow3!*1000)/1000)
+      //  PricePerRow1.append(round(PricePerRow3!*1000)/1000)
+        ArraycountForEachItemView.append(round(PricePerRow3!*1000)/1000)
 
-        print("The subTotal is:", PricePerRow1)
-        print("Number of items in Cart:", PricePerRow1.count)
+        print("The subTotal is:", ArraycountForEachItemView)
+        print("Number of items in Cart:", ArraycountForEachItemView.count)
     
-        sum = PricePerRow1.reduce(0, +)
+        sum = ArraycountForEachItemView.reduce(0, +)
         print("Your Total is", sum)
-        numberofItems.text = String(PricePerRow1.count)
+        numberofItems.text = String(ArraycountForEachItemView.count)
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -110,24 +105,10 @@ class ProductViewController: UIViewController, UITableViewDelegate, UITableViewD
         self.performSegue(withIdentifier: "toCart", sender: sender)
     }
     
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if segue.identifier == "toCart"
-//        {
-//            //    let sender = sender as! UIButton
-//                let cartVC = segue.destination as! CartViewController
-//            print("ProductType aka grocery, appliances, etc:",productType)
-//            cartVC.cartSectionName = productType
-//            print("productTitle aka apple banana etc", productTitle)
-//            cartVC.cartItemForEachSection = productTitle
-//            print("priceForEachItem aka self explanatory", PricePerRow1)
-//            cartVC.priceForEachItem = PricePerRow1
-//            cartVC.totalAmounts = sum
-//            cartVC.totalItems = Double(PricePerRow1.count)
-//            }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toCart"
         {
-       //     let sender = sender as! UIButton
+       // let sender = sender as! UIButton
           let cartVC = segue.destination as! CartViewController
             
             cartVC.cartSectionName = productType
@@ -139,12 +120,13 @@ class ProductViewController: UIViewController, UITableViewDelegate, UITableViewD
             cartVC.priceForEachItem = productPrice
             print("PRODUCT PRICE", productPrice)
             
-            print("PRODUCT PRICE CART", productPriceCart)
-            cartVC.ArraycountForEachItem = PricePerRow1
+          //  cartVC.ArraycountForEachItem = PricePerRow1
             
-            
-            cartVC.totalAmounts = sum
-            cartVC.totalItems1 = Double(PricePerRow1.count)
+            print("ARRAYCOUNTSEGUEVIEW", ArraycountForEachItemView)
+             cartVC.ArraycountForEachItem = ArraycountForEachItemView
+
+            cartVC.totalAmounts1 = sum
+            cartVC.totalItems2 = Double(ArraycountForEachItemView.count)
             
             print("PRICEPERROW", PricePerRow1)
           // cartVC.countForEachItem = PricePerRow
@@ -153,5 +135,6 @@ class ProductViewController: UIViewController, UITableViewDelegate, UITableViewD
         }
     
     }
-}
+    }
+
 

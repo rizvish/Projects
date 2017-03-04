@@ -1,17 +1,21 @@
 //
-//  RecentTableViewCell.swift
+//  CartTableViewCell.swift
 //  Assignment2
 //
-//  Created by Syed Hyder Rizvi on 2/27/17.
+//  Created by Syed Hyder Rizvi on 2/26/17.
 //  Copyright © 2017 Syed Hyder Rizvi. All rights reserved.
 //
 
 import UIKit
 
-class RecentTableViewCell: UITableViewCell {
+class CartTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var totalAndCount: UILabel!
-    @IBOutlet weak var dateOfOrder: UILabel!
+   
+    @IBOutlet weak var productLabelText: UILabel!
+    @IBOutlet weak var subTotalLabel: UILabel?
+    @IBOutlet weak var increaseProductButton: UIButton!
+    @IBOutlet weak var countProductsLabel: UILabel!
+    @IBOutlet weak var decreaseProductButton: UIButton!
     
     override func awakeFromNib() {
         super.awakeFromNib()
