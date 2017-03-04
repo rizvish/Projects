@@ -79,7 +79,7 @@ class RecentViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     override func viewDidAppear(_ animated: Bool) {
       //  saveRecent.totalArray1.sort{$0.dateAndTimeOb! > $1.dateAndTimeOb!}
-
+        
         if saveRecent.totalArray1.count < 10
         {
 
@@ -99,11 +99,12 @@ class RecentViewController: UIViewController, UITableViewDelegate, UITableViewDa
         let cell = tableView3.dequeueReusableCell(withIdentifier: "recentCell", for: indexPath) as! RecentTableViewCell
    
             saveRecent.totalArray1.sort{$0.dateAndTimeOb! > $1.dateAndTimeOb!}
-            cell.totalAndCount.text = "\(saveRecent.totalArray1[indexPath.item].itemCountOb) Items ($\(saveRecent.totalArray1[indexPath.item].sumOB))"
+            cell.totalAndCount.text = "\(saveRecent.totalArray1[indexPath.item].itemCountOb) Items ($\(saveRecent.totalArray1[indexPath.item].sumOB!))"
             
             cell.dateOfOrder?.text = "\(saveRecent.totalArray1[indexPath.item].dateAndTimeOb!)"
 
         ArraycountForEachItemView.removeAll()
+        producys.removeAll()
 
         return cell
 

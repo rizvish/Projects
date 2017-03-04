@@ -8,11 +8,19 @@
 
 import UIKit
 
+
 class ProductViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
+    // FOR CATEGORITEMS VIEW CONTROLLER
     @IBOutlet weak var tableView1: UITableView!
+    
+    //@IBOutlet weak var tableView1: UITableView!
     @IBOutlet weak var testing: UILabel!
+ //   @IBOutlet weak var numberofItems: UILabel!
+    
+    //FOR CATEGORYITEMS VC
     @IBOutlet weak var numberofItems: UILabel!
+
     var productDescription: [String] = []
     var productImage: [UIImage]!
     var productTitle: [String] = []
@@ -27,16 +35,17 @@ class ProductViewController: UIViewController, UITableViewDelegate, UITableViewD
     var PriceArrayRow: [Double]!
     var sum: Double = 0.0
     
-    var productPerRow: [String] = []
+ //   var productPerRow: [String] = []
     
     var emptyArray: [Double] = []
     
     var PricePerRow3: Double!
+    var ProductPricePerRow: String!
     @IBOutlet weak var cartFromCategory: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+    
         tableView1.delegate = self
         tableView1.dataSource = self
         
@@ -47,6 +56,8 @@ class ProductViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillDisappear(animated)
+        
+        numberofItems.text = String(ArraycountForEachItemView.count)
         self.navigationController?.isNavigationBarHidden = false
     }
 
@@ -79,22 +90,41 @@ class ProductViewController: UIViewController, UITableViewDelegate, UITableViewD
         let buttonRow = sender.tag
         let buttonRow1 = sender.superview?.superview as! TableViewCell
         
-   //     let productPerRow1 = buttonRow1.itemTitle.text
-   //     productPerRow.append(productPerRow1!)
-        print("The price of item in ", buttonRow, "is", buttonRow1.itemPrice.text!)
+        
+       ProductPricePerRow = (buttonRow1.itemTitle.text)
+        
+        
+       print("PRODUCTPERROW:", ProductPricePerRow!)
+
+        saveProductType.productArray.append(saveProductType.productStruct(productTypeOb: ProductPricePerRow!))
+        
+       //  print("PRODUCTPERROW:", saveProductType.productArray)
+        
+     //   print("PRODUCTPERROW:", saveProductType.productArray[sender.tag].productTypeOb)
+        
+        producys.append(ProductPricePerRow)
+        
+      //  print("producys", producys)
+        
+      //  print("PRODUCTPERROW:", productPerRow1!)
+      //  print("The price of item in ", buttonRow, "is", buttonRow1.itemPrice.text!)
         
         PricePerRow3 = (Double(buttonRow1.itemPrice.text!))
-        print(PricePerRow3)
+      //  print(PricePerRow3)
         
       //  PricePerRow1.append(round(PricePerRow3!*1000)/1000)
         ArraycountForEachItemView.append(round(PricePerRow3!*1000)/1000)
 
-        print("The subTotal is:", ArraycountForEachItemView)
-        print("Number of items in Cart:", ArraycountForEachItemView.count)
+     //   print("The subTotal is:", ArraycountForEachItemView)
+      //  print("Number of items in Cart:", ArraycountForEachItemView.count)
     
         sum = ArraycountForEachItemView.reduce(0, +)
-        print("Your Total is", sum)
+      //  print("Your Total is", sum)
         numberofItems.text = String(ArraycountForEachItemView.count)
+        
+        print("Add ARRAYCOUNTCART", ArraycountForEachItemView)
+        print("ProductCartArray", producys)
+
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -108,13 +138,14 @@ class ProductViewController: UIViewController, UITableViewDelegate, UITableViewD
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toCart"
         {
-       // let sender = sender as! UIButton
+      //    let sender = sender as! UIButton
           let cartVC = segue.destination as! CartViewController
-            
-            cartVC.cartSectionName = productType
+           // cartVC.cartSectionName = producys[sender.tag]
+            //cartVC.cartSectionName = productType
             print("PRODUCT TYPE", productType)
             
-            cartVC.cartItemForEachSection = productTitle
+           cartVC.cartItemForEachSection =  producys
+            //cartVC.cartItemForEachSection = productTitle
             print("PRODUCT TITLE:", productTitle)
             
             cartVC.priceForEachItem = productPrice

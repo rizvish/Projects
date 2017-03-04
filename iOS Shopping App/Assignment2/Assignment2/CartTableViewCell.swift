@@ -12,7 +12,7 @@ class CartTableViewCell: UITableViewCell {
 
    
     @IBOutlet weak var productLabelText: UILabel!
-    @IBOutlet weak var subTotalLabel: UILabel?
+    @IBOutlet weak var subTotalLabel: UILabel!
     @IBOutlet weak var increaseProductButton: UIButton!
     @IBOutlet weak var countProductsLabel: UILabel!
     @IBOutlet weak var decreaseProductButton: UIButton!

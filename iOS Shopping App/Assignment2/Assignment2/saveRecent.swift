@@ -14,7 +14,7 @@ class saveRecent: NSObject {
 
     struct globalRecentStruct
     {
-        var sumOB: Double = 0.0
+        var sumOB: Double!
         var itemCountOb: Double = 0.0
         var dateAndTimeOb: Date? = nil
 

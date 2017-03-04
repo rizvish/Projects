@@ -10,12 +10,23 @@ import UIKit
 
 class TableViewCell: UITableViewCell {
 
+    /* //FOR Category VC 
     @IBOutlet weak var itemAddButton: UIButton!
     @IBOutlet weak var itemPrice: UILabel!
     @IBOutlet weak var itemTitle: UILabel!
     @IBOutlet weak var itemDescription: UILabel!
     @IBOutlet weak var imagesItem: UIImageView!
+    */
     
+
+     
+//    ONLY FOR CATEGORYITEMS VIEW CONTROLLER
+    @IBOutlet weak var imagesItem: UIImageView!
+    @IBOutlet weak var itemTitle: UILabel!
+    @IBOutlet weak var itemDescription: UILabel!
+    @IBOutlet weak var itemPrice: UILabel!
+    @IBOutlet weak var itemAddButton: UIButton!
+ 
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
