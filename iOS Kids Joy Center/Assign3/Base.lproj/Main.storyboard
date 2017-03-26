@@ -270,8 +270,40 @@
                     <view key="view" contentMode="scaleToFill" id="1Wc-EL-TUb">
                         <rect key="frame" x="0.0" y="64" width="667" height="311"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="t3l-FS-Fmd">
+                                <rect key="frame" x="489" y="273" width="158" height="30"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" notEnabled="YES"/>
+                                </accessibility>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lf7-Ha-b60">
+                                <rect key="frame" x="20" y="273" width="158" height="30"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" notEnabled="YES"/>
+                                </accessibility>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="lf7-Ha-b60" firstAttribute="width" secondItem="lf7-Ha-b60" secondAttribute="height" multiplier="79:15" id="AoT-h4-LkM"/>
+                            <constraint firstItem="t3l-FS-Fmd" firstAttribute="trailing" secondItem="1Wc-EL-TUb" secondAttribute="trailingMargin" id="PWr-DA-Rlu"/>
+                            <constraint firstItem="qPf-AW-utU" firstAttribute="top" secondItem="t3l-FS-Fmd" secondAttribute="bottom" constant="8" id="TED-Wt-BUg"/>
+                            <constraint firstItem="lf7-Ha-b60" firstAttribute="leading" secondItem="1Wc-EL-TUb" secondAttribute="leadingMargin" id="a8k-4s-I1E"/>
+                            <constraint firstItem="t3l-FS-Fmd" firstAttribute="width" secondItem="t3l-FS-Fmd" secondAttribute="height" multiplier="79:15" id="ehx-ad-uII"/>
+                            <constraint firstItem="qPf-AW-utU" firstAttribute="top" secondItem="lf7-Ha-b60" secondAttribute="bottom" constant="8" id="ekA-yO-rpc"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="score1" destination="t3l-FS-Fmd" id="SUh-Ui-2wJ"/>
+                        <outlet property="timerLabel" destination="lf7-Ha-b60" id="LBZ-Cr-5QN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WhB-uG-UiR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

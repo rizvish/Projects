@@ -28,8 +28,7 @@ class MemoryViewController: UIViewController, UICollectionViewDelegate, UICollec
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
+
         self.navigationItem.hidesBackButton = true
         
         _ = [1, 2, 3].shuffled()
