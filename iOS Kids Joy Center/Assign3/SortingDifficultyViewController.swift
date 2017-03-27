@@ -19,6 +19,8 @@ class SortingDifficultyViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.navigationController?.title = "Sorting Game"
+        
         let backgroundImg = UIImage(named: "download")
         view.backgroundColor = UIColor(patternImage: backgroundImg!)
         
@@ -44,7 +46,11 @@ class SortingDifficultyViewController: UIViewController {
     }
     
 
- 
+    @IBAction func unwindToSorting(segue: UIStoryboardSegue)
+    {
+        
+        
+    }
     @IBAction func playSorting(_ sender: Any) {
 //        let alert = UIAlertController(title: "\(difficulty) Diffculty", message: "Good Luck!", preferredStyle: UIAlertControllerStyle.alert)
 //        

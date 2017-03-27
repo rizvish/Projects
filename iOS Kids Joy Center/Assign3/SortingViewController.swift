@@ -20,6 +20,7 @@ class SortingViewController: UIViewController {
     ]
     
     var seconds: Int = 0
+    var score: Int = 0
     var timerCount = Timer()
     var location = CGPoint(x: 0, y: 0)
     
@@ -56,6 +57,8 @@ class SortingViewController: UIViewController {
     var hardImage10: UIImageView? = nil
     var hardImage11: UIImageView? = nil
     
+    var topView: UIView? = nil
+    
     var score1: UITextField!
     var timerLabel: UITextField!
     
@@ -67,6 +70,11 @@ class SortingViewController: UIViewController {
         let backgroundView = UIImageView(frame: CGRect(x: 0, y: view.frame.height * 0.25, width: view.frame.width, height: view.frame.height * 0.75))
         backgroundView.image = #imageLiteral(resourceName: "air-land-water")
         view.addSubview(backgroundView)
+        
+        topView = UIView(frame: CGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.height * 0.25))
+        topView?.backgroundColor = UIColor.cyan
+        view.addSubview(topView!)
+        
         
         timerLabel = UITextField(frame: CGRect(x: 0, y: view.frame.height * 0.8, width: view.frame.width * 0.50, height: view.frame.height * 0.3))
         view.addSubview(timerLabel)
@@ -106,42 +114,58 @@ class SortingViewController: UIViewController {
             if (imageEasy7?.frame.contains(location))!
             {
                 imageEasy7?.center = location
+                score += 5
+                score1.text = "\(score)"
                 
             }
             if (imageViewUhOH?.frame.contains(location))!
             {
                 imageViewUhOH?.center = location
+                score += 5
+                score1.text = "\(score)"
             }
             
             if (imageViewUhOH1?.frame.contains(location))!
             {
                 imageViewUhOH1?.center = location
+                score += 5
+                score1.text = "\(score)"
 
             }
             if (imageEasy2?.frame.contains(location))!
             {
                 print("3rd img tapped")
                 imageEasy2?.center = location
+                score += 5
+                score1.text = "\(score)"
             }
             if (imageEasy3?.frame.contains(location))!
             {
                 print("4th img tapped")
                 imageEasy3?.center = location
+                score += 5
+                score1.text = "\(score)"
             }
             if (imageEasy4?.frame.contains(location))!
             {
                 print("5th img tapped")
                 imageEasy4?.center = location
+                score += 5
+                score1.text = "\(score)"
             }
             if (imageEasy5?.frame.contains(location))!
             {
                 print("6th img tapped")
                 imageEasy5?.center = location
+                score += 5
+                score1.text = "\(score)"
             }
             if (imageEasy6?.frame.contains(location))!
             {
                 print("6th img tapped")
                 imageEasy6?.center = location
+                score += 5
+                score1.text = "\(score)"
             }
 
         }
@@ -151,47 +175,67 @@ class SortingViewController: UIViewController {
             {
                 print("first img tapped")
                 mediumImage0?.center = location
+                score += 5
+                score1.text = "\(score)"
             }
             
             if (mediumImage1?.frame.contains(location))!
             {
                 mediumImage1?.center = location
+                score += 5
+                score1.text = "\(score)"
                 
             }
             if (mediumImage2?.frame.contains(location))!
             {
                 print("second img tapped")
                 mediumImage2?.center = location
+                score += 5
+                score1.text = "\(score)"
             }
             
             if (mediumImage3?.frame.contains(location))!
             {
                 mediumImage3?.center = location
+                score += 5
+                score1.text = "\(score)"
             }
             
             if (mediumImage4?.frame.contains(location))!
             {
                 mediumImage4?.center = location
+                score += 5
+                score1.text = "\(score)"
             }
             if (mediumImage5?.frame.contains(location))!
             {
                 mediumImage5?.center = location
+                score += 5
+                score1.text = "\(score)"
             }
             if (mediumImage6?.frame.contains(location))!
             {
                 mediumImage6?.center = location
+                score += 5
+                score1.text = "\(score)"
             }
             if (mediumImage7?.frame.contains(location))!
             {
                 mediumImage7?.center = location
+                score += 5
+                score1.text = "\(score)"
             }
             if (mediumImage8?.frame.contains(location))!
             {
                 mediumImage8?.center = location
+                score += 5
+                score1.text = "\(score)"
             }
             if (mediumImage9?.frame.contains(location))!
             {
                 mediumImage9?.center = location
+                score += 5
+                score1.text = "\(score)"
             }
         }
         else if difficulty == "Hard"
@@ -199,55 +243,79 @@ class SortingViewController: UIViewController {
             if (hardImage0?.frame.contains(location))!
             {
                 hardImage0?.center = location
+                score += 5
+                score1.text = "\(score)"
             }
             
             if (hardImage1?.frame.contains(location))!
             {
                 hardImage1?.center = location
+                score += 5
+                score1.text = "\(score)"
                 
             }
             if (hardImage2?.frame.contains(location))!
             {
                 print("second img tapped")
                 hardImage2?.center = location
+                score += 5
+                score1.text = "\(score)"
             }
             
             if (hardImage3?.frame.contains(location))!
             {
                 hardImage3?.center = location
+                score += 5
+                score1.text = "\(score)"
             }
             
             if (hardImage4?.frame.contains(location))!
             {
                 hardImage4?.center = location
+                score += 5
+                score1.text = "\(score)"
             }
             if (hardImage5?.frame.contains(location))!
             {
                 hardImage5?.center = location
+                score += 5
+                score1.text = "\(score)"
             }
             if (hardImage6?.frame.contains(location))!
             {
                 hardImage6?.center = location
+                score += 5
+                score1.text = "\(score)"
             }
             if (hardImage7?.frame.contains(location))!
             {
                 hardImage7?.center = location
+                score += 5
+                score1.text = "\(score)"
             }
             if (hardImage8?.frame.contains(location))!
             {
                 hardImage8?.center = location
+                score += 5
+                score1.text = "\(score)"
             }
             if (hardImage9?.frame.contains(location))!
             {
                 hardImage9?.center = location
+                score += 5
+                score1.text = "\(score)"
             }
             if (hardImage10?.frame.contains(location))!
             {
                 hardImage10?.center = location
+                score += 5
+                score1.text = "\(score)"
             }
             if (hardImage11?.frame.contains(location))!
             {
                 hardImage11?.center = location
+                score += 5
+                score1.text = "\(score)"
             }
         }
     }
@@ -599,15 +667,33 @@ class SortingViewController: UIViewController {
         if(seconds == 0)
         {
             timerCount.invalidate()
-            let alert0 = UIAlertController(title: "Time is up!", message: "You scored ___", preferredStyle: .alert)
+            
+        
+            let alert0 = UIAlertController(title: "Time is up!", message: "You scored \(score). Want to play again?", preferredStyle: .alert)
             //                 alert0.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
-            alert0.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: { action in self.performSegue(withIdentifier: "unwindVC", sender: self)
+            alert0.addAction(UIAlertAction(title: "Yes", style: UIAlertActionStyle.cancel, handler: { action in self.performSegue(withIdentifier: "unwindToSorting", sender: self)
+            }))
+            alert0.addAction(UIAlertAction(title: "No", style: UIAlertActionStyle.default, handler: { action in self.performSegue(withIdentifier: "sortToHigh", sender: self)
             }))
             
             self.present(alert0, animated: true, completion: nil)
             
             audioPlayer.play()
         }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if (segue.identifier == "sortToHigh")
+        {
+        let sortingDest: HighScoresViewController = segue.destination as! HighScoresViewController
+        
+        print("SCORESS", score)
+        sortingDest.scores = score
+        sortingDest.nameOfGame = "Sorting"
+        sortingDest.difficultyHigh = difficulty
+        }
+        
     }
     
     func setImageCGRect()
@@ -635,7 +721,7 @@ class SortingViewController: UIViewController {
         switch difficulty {
         case "Easy":
             print("hello")
-            seconds = 60
+            seconds = 60 //60
             timerLabel.text = "\(seconds)"
             timerCount = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(MemoryViewController.counter), userInfo: nil, repeats: true)
         
@@ -673,58 +759,58 @@ class SortingViewController: UIViewController {
 
         case "Medium":
             print("heelo")
-            seconds = 45
+            seconds = 45 //45
          
             timerLabel.text = "\(seconds)"
             timerCount = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(MemoryViewController.counter), userInfo: nil, repeats: true)
             
-            let topView = UIView(frame: CGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.height * 0.25))
-            topView.backgroundColor = UIColor.cyan
-            view.addSubview(topView)
+//            let topView = UIView(frame: CGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.height * 0.25))
+//            topView.backgroundColor = UIColor.cyan
+            view.addSubview(topView!)
             
-            mediumImage0 = UIImageView(frame: CGRect(x: 30, y: topView.frame.height*0.40 + 5, width: topView.frame.width * 0.07, height: topView.frame.height * 0.40))
+            mediumImage0 = UIImageView(frame: CGRect(x: 30, y: (topView?.frame.height)!*0.40 + 5, width: (topView?.frame.width)! * 0.07, height: (topView?.frame.height)! * 0.40))
             mediumImage0?.image = images[0]
-            topView.addSubview(mediumImage0!)
+            topView?.addSubview(mediumImage0!)
             
-            mediumImage1 = UIImageView(frame: CGRect(x: (mediumImage0?.frame.width)! + 41, y: topView.frame.height*0.40 + 5, width: topView.frame.width * 0.07, height: topView.frame.height * 0.40))
+            mediumImage1 = UIImageView(frame: CGRect(x: (mediumImage0?.frame.width)! + 41, y: (topView?.frame.height)!*0.40 + 5, width: (topView?.frame.width)! * 0.07, height: (topView?.frame.height)! * 0.40))
             mediumImage1?.image = images[1]
-            topView.addSubview(mediumImage1!)
+            topView?.addSubview(mediumImage1!)
             
-            mediumImage2 = UIImageView(frame: CGRect(x: (mediumImage0?.frame.width)! + 82, y: topView.frame.height*0.40 + 5, width: topView.frame.width * 0.07, height: topView.frame.height * 0.40))
+            mediumImage2 = UIImageView(frame: CGRect(x: (mediumImage0?.frame.width)! + 82, y: (topView?.frame.height)!*0.40 + 5, width: (topView?.frame.width)! * 0.07, height: (topView?.frame.height)! * 0.40))
             mediumImage2?.image = images[2]
-            topView.addSubview(mediumImage2!)
+            topView?.addSubview(mediumImage2!)
             
-            mediumImage3 = UIImageView(frame: CGRect(x: (mediumImage0?.frame.width)! + 123, y: topView.frame.height*0.40 + 5, width: topView.frame.width * 0.07, height: topView.frame.height * 0.40))
+            mediumImage3 = UIImageView(frame: CGRect(x: (mediumImage0?.frame.width)! + 123, y: (topView?.frame.height)!*0.40 + 5, width: (topView?.frame.width)! * 0.07, height: (topView?.frame.height)! * 0.40))
             mediumImage3?.image = images[3]
-            topView.addSubview(mediumImage3!)
+            topView?.addSubview(mediumImage3!)
             
-            mediumImage4 = UIImageView(frame: CGRect(x: (mediumImage0?.frame.width)! + 164, y: topView.frame.height*0.40 + 5, width: topView.frame.width * 0.07, height: topView.frame.height * 0.40))
+            mediumImage4 = UIImageView(frame: CGRect(x: (mediumImage0?.frame.width)! + 164, y: (topView?.frame.height)!*0.40 + 5, width: (topView?.frame.width)! * 0.07, height: (topView?.frame.height)! * 0.40))
             mediumImage4?.image = images[4]
-            topView.addSubview(mediumImage4!)
+            topView?.addSubview(mediumImage4!)
             
-            mediumImage5 = UIImageView(frame: CGRect(x: (mediumImage0?.frame.width)! + 205, y: topView.frame.height*0.40 + 5, width: topView.frame.width * 0.07, height: topView.frame.height * 0.40))
+            mediumImage5 = UIImageView(frame: CGRect(x: (mediumImage0?.frame.width)! + 205, y: (topView?.frame.height)!*0.40 + 5, width: (topView?.frame.width)! * 0.07, height: (topView?.frame.height)! * 0.40))
             mediumImage5?.image = images[5]
-            topView.addSubview(mediumImage5!)
+            topView?.addSubview(mediumImage5!)
             
-            mediumImage6 = UIImageView(frame: CGRect(x: (mediumImage0?.frame.width)! + 246, y: topView.frame.height*0.40 + 5, width: topView.frame.width * 0.07, height: topView.frame.height * 0.40))
+            mediumImage6 = UIImageView(frame: CGRect(x: (mediumImage0?.frame.width)! + 246, y: (topView?.frame.height)!*0.40 + 5, width: (topView?.frame.width)! * 0.07, height: (topView?.frame.height)! * 0.40))
             mediumImage6?.image = images[6]
-            topView.addSubview(mediumImage6!)
+            topView?.addSubview(mediumImage6!)
             
-            mediumImage7 = UIImageView(frame: CGRect(x: (mediumImage0?.frame.width)! + 287, y: topView.frame.height*0.40 + 5, width: topView.frame.width * 0.07, height: topView.frame.height * 0.40))
+            mediumImage7 = UIImageView(frame: CGRect(x: (mediumImage0?.frame.width)! + 287, y: (topView?.frame.height)!*0.40 + 5, width: (topView?.frame.width)! * 0.07, height: (topView?.frame.height)! * 0.40))
             mediumImage7?.image = images[7]
-            topView.addSubview(mediumImage7!)
+            topView?.addSubview(mediumImage7!)
             
-            mediumImage8 = UIImageView(frame: CGRect(x: (mediumImage0?.frame.width)! + 328, y: topView.frame.height*0.40 + 5, width: topView.frame.width * 0.07, height: topView.frame.height * 0.40))
+            mediumImage8 = UIImageView(frame: CGRect(x: (mediumImage0?.frame.width)! + 328, y: (topView?.frame.height)!*0.40 + 5, width: (topView?.frame.width)! * 0.07, height: (topView?.frame.height)! * 0.40))
             mediumImage8?.image = images[8]
-            topView.addSubview(mediumImage8!)
+            topView?.addSubview(mediumImage8!)
             
-            mediumImage9 = UIImageView(frame: CGRect(x: (mediumImage0?.frame.width)! + 369, y: topView.frame.height*0.40 + 5, width: topView.frame.width * 0.07, height: topView.frame.height * 0.40))
+            mediumImage9 = UIImageView(frame: CGRect(x: (mediumImage0?.frame.width)! + 369, y: (topView?.frame.height)!*0.40 + 5, width: (topView?.frame.width)! * 0.07, height: (topView?.frame.height)! * 0.40))
             mediumImage9?.image = images[9]
-            topView.addSubview(mediumImage9!)
+            topView?.addSubview(mediumImage9!)
             
         case "Hard":
             print("hello")
-            seconds = 30
+            seconds = 30 //30
             timerLabel.text = "\(seconds)"
             timerCount = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(MemoryViewController.counter), userInfo: nil, repeats: true)
             
@@ -782,6 +868,7 @@ class SortingViewController: UIViewController {
         default:
             print("default")
         }
-    }
     
+    
+}
 }

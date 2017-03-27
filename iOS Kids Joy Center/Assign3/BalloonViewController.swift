@@ -18,8 +18,15 @@ class BalloonViewController: UIViewController {
     var seconds: Int = 0
     var timerCount = Timer()
     var audioPlayer = AVAudioPlayer()
+    
+    struct balloonVariables{
+        
+        var balloonImage: UIImage
+        var balloonNumber: UIImage
+    }
 
-
+    var arrayBalloon = [balloonVariables]()
+    
     @IBAction func unwindFromBalloon(_ sender: Any) {
         timerCount.invalidate()
         self.performSegue(withIdentifier: "unwindVC", sender: self)
@@ -32,7 +39,10 @@ class BalloonViewController: UIViewController {
         
         self.navigationItem.hidesBackButton = true
         self.navigationItem.title = "Balloon Game"
-
+        
+        arrayBalloon.append(balloonVariables(balloonImage: UIImage(named: "color1")!, balloonNumber: UIImage(named:
+        "num0")!))
+        
         let imageView0 = UIImageView(frame: CGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.height))
         imageView0.image = #imageLiteral(resourceName: "balloonBackground")
         view.addSubview(imageView0)
@@ -46,11 +56,38 @@ class BalloonViewController: UIViewController {
             print("something to do with audio error")
         }
         
-        UIBalloon()
+//        setBalloonUI()
+        
+        setBalloonSecondaries()
+        setBalloonUI()
+
+
         
     }
     
-    func UIBalloon()
+    func setBalloonUI()
+    {
+        switch difficulty {
+        case "Easy":
+            
+//            let easyUIView = UIView(frame: CGRect(x: 0, y: view.frame.height * 0.85, width: view.frame.width * 0.10, height: view.frame.height * 0.15))
+            let easyBalloon1 = UIImageView(frame: CGRect(x: 0, y: view.frame.height * 0.85, width: view.frame.width * 0.10, height: view.frame.height * 0.15))
+            self.view.addSubview(easyBalloon1)
+            let easyImage1 = UIImageView(frame: CGRect(x: easyBalloon1.center.x - 11, y: easyBalloon1.center.y - 13, width: easyBalloon1.frame.width * 0.50, height: easyBalloon1.frame.height * 0.50))
+            self.view.addSubview(easyImage1)
+            easyBalloon1.image = arrayBalloon[0].balloonImage
+            easyImage1.image = arrayBalloon[0].balloonNumber
+            
+            UIImageView.animate(withDuration: TimeInterval(4), delay: 0, options: .allowUserInteraction, animations: {
+                easyBalloon1.frame.origin.y = 0
+                easyImage1.frame.origin.y = 0
+            }, completion: {_ in easyBalloon1.removeFromSuperview() })
+        default:
+            print("default")
+        }
+    }
+    
+    func setBalloonSecondaries()
     {
         textFieldTimer = UITextField(frame: CGRect(x: 0, y: view.frame.height * 0.8, width: view.frame.width * 0.50, height: view.frame.height * 0.3))
         view.addSubview(textFieldTimer)

@@ -196,7 +196,7 @@
                                         <rect key="frame" x="0.0" y="28" width="667" height="53"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Wbb-Ga-RH0" id="252-dx-2aK">
-                                            <rect key="frame" x="0.0" y="0.0" width="667" height="52.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="667" height="52"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1.)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UIX-x5-T63">
@@ -205,23 +205,26 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sorting" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C5f-ju-bU1">
-                                                    <rect key="frame" x="151" y="16" width="124" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hard" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6qc-Ej-shc">
+                                                    <rect key="frame" x="253.5" y="16" width="160" height="21"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" secondItem="C5f-ju-bU1" secondAttribute="height" multiplier="124:21" id="JBb-kS-OHO"/>
+                                                        <constraint firstAttribute="width" secondItem="6qc-Ej-shc" secondAttribute="height" multiplier="160:21" id="eLo-Be-Uus"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hard" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6qc-Ej-shc">
-                                                    <rect key="frame" x="315" y="16" width="38" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nkt-q9-gLe">
+                                                    <rect key="frame" x="443.5" y="16" width="223.5" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nkt-q9-gLe">
-                                                    <rect key="frame" x="383" y="16" width="284" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sorting" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C5f-ju-bU1">
+                                                    <rect key="frame" x="89.5" y="16" width="124" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="C5f-ju-bU1" secondAttribute="height" multiplier="124:21" id="JBb-kS-OHO"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -251,13 +254,25 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="e08-Q5-niR">
+                        <barButtonItem key="leftBarButtonItem" style="plain" id="h0l-HD-k0u">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="fUD-lq-HLH">
+                                <rect key="frame" x="20" y="7" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="homeButton"/>
+                                <connections>
+                                    <segue destination="FoN-p8-LfY" kind="show" id="Zby-hg-NqY"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="HIW-wD-QDq" id="jfP-iM-X0b"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4ao-LQ-auO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5382" y="1550"/>
+            <point key="canvasLocation" x="5381.5592203898059" y="1549.5999999999999"/>
         </scene>
         <!--Sorting View Controller-->
         <scene sceneID="Z3P-OE-qOb">
@@ -285,7 +300,10 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <segue destination="rve-QF-iIl" kind="unwind" identifier="unwindVC" unwindAction="unwindToMenuWithSegue:" id="qPn-dK-K1O"/>
+                        <segue destination="rve-QF-iIl" kind="unwind" identifier="unwindToSorting" unwindAction="unwindToSortingWithSegue:" id="P6I-Q2-CZH"/>
+                        <segue destination="rve-QF-iIl" kind="unwind" identifier="unwindVC" unwindAction="unwindToMenuWithSegue:" id="tza-Tc-wsf"/>
+                        <segue destination="rve-QF-iIl" kind="unwind" identifier="unwindHigh" unwindAction="unwindToHighScoresWithSegue:" id="DVG-S1-d2a"/>
+                        <segue destination="w3K-u4-fjs" kind="show" identifier="sortToHigh" id="HBz-Dl-J8S"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WhB-uG-UiR" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -412,7 +430,7 @@
                         <viewControllerLayoutGuide type="bottom" id="Zyf-Bq-dSf"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Bq8-hn-MrW">
-                        <rect key="frame" x="0.0" y="64" width="667" height="311"/>
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -624,4 +642,8 @@
         <image name="question" width="512" height="512"/>
         <image name="sorting-icon" width="133" height="100"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="Zby-hg-NqY"/>
+        <segue reference="RmN-hf-hw8"/>
+    </inferredMetricsTieBreakers>
 </document>

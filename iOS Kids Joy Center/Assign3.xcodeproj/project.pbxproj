@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9B4FF9411E89AD12000689EB /* arrayScoresNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4FF9401E89AD12000689EB /* arrayScoresNames.swift */; };
 		9BE8307D1E856EE200FF33A1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE8307C1E856EE200FF33A1 /* AppDelegate.swift */; };
 		9BE8307F1E856EE200FF33A1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE8307E1E856EE200FF33A1 /* ViewController.swift */; };
 		9BE830821E856EE200FF33A1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9BE830801E856EE200FF33A1 /* Main.storyboard */; };
@@ -46,6 +47,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9B4FF9401E89AD12000689EB /* arrayScoresNames.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = arrayScoresNames.swift; sourceTree = "<group>"; };
 		9BE830791E856EE200FF33A1 /* Assign3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Assign3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BE8307C1E856EE200FF33A1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9BE8307E1E856EE200FF33A1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -139,6 +141,7 @@
 				9BE830B81E85BB1300FF33A1 /* HighScoresViewController.swift */,
 				9BE830BA1E85BB7E00FF33A1 /* HighScoresCellTableViewCell.swift */,
 				9BE830BC1E85C35A00FF33A1 /* MemoryCellCollectionViewCell.swift */,
+				9B4FF9401E89AD12000689EB /* arrayScoresNames.swift */,
 			);
 			path = Assign3;
 			sourceTree = "<group>";
@@ -303,6 +306,7 @@
 				9BE830AB1E85733900FF33A1 /* InitialViewController.swift in Sources */,
 				9BE830B51E85B1FD00FF33A1 /* BalloonDifficultyViewController.swift in Sources */,
 				9BE830B31E85AEA900FF33A1 /* BalloonViewController.swift in Sources */,
+				9B4FF9411E89AD12000689EB /* arrayScoresNames.swift in Sources */,
 				9BE830BB1E85BB7E00FF33A1 /* HighScoresCellTableViewCell.swift in Sources */,
 				9BE830B71E85B20B00FF33A1 /* MemoryDifficultyViewController.swift in Sources */,
 				9BE830AD1E85832900FF33A1 /* MemoryViewController.swift in Sources */,
@@ -560,6 +564,7 @@
 				9BE830A31E856EE300FF33A1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9BE830A41E856EE300FF33A1 /* Build configuration list for PBXNativeTarget "Assign3Tests" */ = {
 			isa = XCConfigurationList;
@@ -568,6 +573,7 @@
 				9BE830A61E856EE300FF33A1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9BE830A71E856EE300FF33A1 /* Build configuration list for PBXNativeTarget "Assign3UITests" */ = {
 			isa = XCConfigurationList;
@@ -576,6 +582,7 @@
 				9BE830A91E856EE300FF33A1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

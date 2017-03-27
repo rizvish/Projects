@@ -16,7 +16,8 @@ class BalloonDifficultyViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.navigationController?.title = "Balloon Game"
+
         let backgroundImg = UIImage(named: "download")
         view.backgroundColor = UIColor(patternImage: backgroundImg!)
         

@@ -99,11 +99,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Assign3/HighScoresViewController.swift"
-            timestampString = "512081869.237306"
+            timestampString = "512340664.428357"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "47"
-            endingLineNumber = "47"
+            startingLineNumber = "91"
+            endingLineNumber = "91"
             landmarkName = "tableView(_:cellForRowAt:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -131,11 +131,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Assign3/SortingViewController.swift"
-            timestampString = "512284482.8795"
+            timestampString = "512340790.322049"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "623"
-            endingLineNumber = "623"
+            startingLineNumber = "709"
+            endingLineNumber = "709"
             landmarkName = "setImageCGRect()"
             landmarkType = "7">
          </BreakpointContent>
@@ -147,11 +147,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Assign3/SortingViewController.swift"
-            timestampString = "512284482.8795"
+            timestampString = "512325246.611695"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "96"
-            endingLineNumber = "96"
+            startingLineNumber = "104"
+            endingLineNumber = "104"
             landmarkName = "viewDidLoad()"
             landmarkType = "7">
          </BreakpointContent>
@@ -163,11 +163,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Assign3/SortingViewController.swift"
-            timestampString = "512284482.8795"
+            timestampString = "512340790.322049"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "633"
-            endingLineNumber = "633"
+            startingLineNumber = "719"
+            endingLineNumber = "719"
             landmarkName = "setImageCGRect()"
             landmarkType = "7">
          </BreakpointContent>
@@ -179,11 +179,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Assign3/SortingViewController.swift"
-            timestampString = "512284482.8795"
+            timestampString = "512325246.611695"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "584"
-            endingLineNumber = "584"
+            startingLineNumber = "652"
+            endingLineNumber = "652"
             landmarkName = "SortingViewController"
             landmarkType = "3">
          </BreakpointContent>
@@ -195,11 +195,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Assign3/SortingViewController.swift"
-            timestampString = "512284482.8795"
+            timestampString = "512325246.611695"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "434"
-            endingLineNumber = "434"
+            startingLineNumber = "502"
+            endingLineNumber = "502"
             landmarkName = "touchesMoved(_:with:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -211,12 +211,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Assign3/BalloonViewController.swift"
-            timestampString = "512243242.26545"
+            timestampString = "512348187.309455"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "95"
-            endingLineNumber = "95"
-            landmarkName = "UIBalloon()"
+            startingLineNumber = "132"
+            endingLineNumber = "132"
+            landmarkName = "setBalloonSecondaries()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -227,11 +227,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Assign3/SortingViewController.swift"
-            timestampString = "512284482.8795"
+            timestampString = "512340790.322049"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "666"
-            endingLineNumber = "666"
+            startingLineNumber = "752"
+            endingLineNumber = "752"
             landmarkName = "setImageCGRect()"
             landmarkType = "7">
          </BreakpointContent>
@@ -243,13 +243,93 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Assign3/SortingViewController.swift"
-            timestampString = "512284482.8795"
+            timestampString = "512340790.322049"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "689"
-            endingLineNumber = "689"
+            startingLineNumber = "775"
+            endingLineNumber = "775"
             landmarkName = "setImageCGRect()"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Assign3/SortingViewController.swift"
+            timestampString = "512325246.611695"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "75"
+            endingLineNumber = "75"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Assign3/SortingViewController.swift"
+            timestampString = "512340790.322049"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "791"
+            endingLineNumber = "791"
+            landmarkName = "setImageCGRect()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Assign3/SortingViewController.swift"
+            timestampString = "512326236.538664"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "672"
+            endingLineNumber = "672"
+            landmarkName = "counter()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Assign3.SortingViewController.counter () -&gt; ()"
+                  moduleName = "Assign3"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/rizvish/Desktop/Spring%202017/CMSC%20491/Assign3/Assign3/SortingViewController.swift"
+                  timestampString = "512326141.560388"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "673"
+                  endingLineNumber = "673"
+                  offsetFromSymbolStart = "1117">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Assign3.SortingViewController.(counter () -&gt; ()).(closure #1)"
+                  moduleName = "Assign3"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/rizvish/Desktop/Spring%202017/CMSC%20491/Assign3/Assign3/SortingViewController.swift"
+                  timestampString = "512326141.563307"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "673"
+                  endingLineNumber = "673"
+                  offsetFromSymbolStart = "127">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
