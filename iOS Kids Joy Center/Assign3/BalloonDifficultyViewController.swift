@@ -43,12 +43,12 @@ class BalloonDifficultyViewController: UIViewController {
     }
     
     @IBAction func playBalloon(_ sender: Any) {
-        let alert = UIAlertController(title: "\(difficulty) Diffculty", message: "Good Luck!", preferredStyle: UIAlertControllerStyle.alert)
-        
-        alert.addAction(UIAlertAction(title: "Okay", style: UIAlertActionStyle.default, handler: nil))
-        
-        
-        self.present(alert, animated: true, completion: nil)
+//        let alert = UIAlertController(title: "\(difficulty) Diffculty", message: "Good Luck!", preferredStyle: UIAlertControllerStyle.alert)
+//        
+//        alert.addAction(UIAlertAction(title: "Okay", style: UIAlertActionStyle.default, handler: nil))
+//        
+//        
+//        self.present(alert, animated: true, completion: nil)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

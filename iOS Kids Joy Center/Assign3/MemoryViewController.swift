@@ -22,14 +22,26 @@ class MemoryViewController: UIViewController, UICollectionViewDelegate, UICollec
     var timerCount = Timer()
     var audioPlayer = AVAudioPlayer()
     
-    @IBOutlet weak var timerLabel: UITextField!
-    @IBOutlet weak var score1: UITextField!
+    var timerLabel: UITextField!
+    var score1: UITextField!
     @IBOutlet weak var collectionView: UICollectionView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        
+        self.navigationItem.title = "Memory Game"
+
         self.navigationItem.hidesBackButton = true
+        
+        let backgroundImg = UIImage(named: "background")
+        
+        view.backgroundColor = UIColor(patternImage: backgroundImg!)
+        
+        collectionView.backgroundColor = UIColor(patternImage: backgroundImg!)
+        
+        collectionView.delegate = self
+        collectionView.dataSource = self
         
         _ = [1, 2, 3].shuffled()
         // x == [2, 3, 1]
@@ -44,6 +56,12 @@ class MemoryViewController: UIViewController, UICollectionViewDelegate, UICollec
         print("After Numbers", numbers)
         
         // fiveStrings == ["20", "45", "70", "30", ...]
+        
+        timerLabel = UITextField(frame: CGRect(x: 0, y: 0, width: view.frame.width * 0.50, height: view.frame.height * 0.3))
+        view.addSubview(timerLabel)
+        
+        score1 = UITextField(frame: CGRect(x: view.frame.width * 0.7, y: 0, width: view.frame.width * 0.50, height: view.frame.height * 0.3))
+        view.addSubview(score1)
         
         timerLabel.isUserInteractionEnabled = false
         score1.isUserInteractionEnabled = false
@@ -65,15 +83,6 @@ class MemoryViewController: UIViewController, UICollectionViewDelegate, UICollec
         score1.leftView = imageView1
 
       print("difficulty set to level \(difficulty)")
-        
-        let backgroundImg = UIImage(named: "background")
-        
-        view.backgroundColor = UIColor(patternImage: backgroundImg!)
-
-        collectionView.backgroundColor = UIColor(patternImage: backgroundImg!)
-
-        collectionView.delegate = self
-        collectionView.dataSource = self
         
         switch difficulty {
         case "Easy":
