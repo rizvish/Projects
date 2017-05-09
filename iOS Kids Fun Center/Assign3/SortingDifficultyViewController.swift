@@ -19,7 +19,7 @@ class SortingDifficultyViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.navigationController?.title = "Sorting Game"
+        self.navigationItem.title = "Sorting Game"
         
         let backgroundImg = UIImage(named: "download")
         view.backgroundColor = UIColor(patternImage: backgroundImg!)

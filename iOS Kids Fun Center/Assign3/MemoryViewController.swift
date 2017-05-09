@@ -21,15 +21,54 @@ class MemoryViewController: UIViewController, UICollectionViewDelegate, UICollec
     var seconds: Int = 0
     var timerCount = Timer()
     var audioPlayer = AVAudioPlayer()
+    var scoreAdd = 0
     
     var timerLabel: UITextField!
     var score1: UITextField!
     @IBOutlet weak var collectionView: UICollectionView!
     
+//    func didDoubleTapCollectionView(gesture: UITapGestureRecognizer) {
+//        var pointInCollectionView: CGPoint = gesture.location(in: self.collectionView)
+//        var selectedIndexPath = self.collectionView.indexPathForItem(at: pointInCollectionView)
+//
+//        var selectedCell: UICollectionViewCell = self.collectionView.cellForItem(at: selectedIndexPath! as IndexPath)!
+//        
+//    }
+    
+    
+    func tap(sender: UITapGestureRecognizer){
+    
+        
+    if let indexPath = self.collectionView?.indexPathForItem(at: sender.location(in: self.collectionView)) {
+  
+    let cell = self.collectionView?.cellForItem(at: indexPath) as! MemoryCellCollectionViewCell
+    audioPlayer.play()
+    scoreAdd += 5
+    
+        score1.text = String(scoreAdd)
+    cell.backgroundImg.isHidden = true
+    }
+    else
+    {
+    print("1.) collection view was tapped")
+    }
+    }
+    
+    func doubleTap(sender: UITapGestureRecognizer){
+        
+        
+       }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+      //  var doubletapgesture : UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: Selector("doubleTap:"))
+      //  doubletapgesture.numberOfTapsRequired = 2
+       // collectionView.addGestureRecognizer(doubletapgesture)
         
+        collectionView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(tap)))
+
+
         self.navigationItem.title = "Memory Game"
 
         self.navigationItem.hidesBackButton = true
@@ -112,26 +151,36 @@ class MemoryViewController: UIViewController, UICollectionViewDelegate, UICollec
         }
         
          arrayMemory.append(memory(images: UIImage(named: "1")!))
+         arrayMemory.append(memory(images: UIImage(named: "1")!))
+         arrayMemory.append(memory(images: UIImage(named: "2")!))
          arrayMemory.append(memory(images: UIImage(named: "2")!))
          arrayMemory.append(memory(images: UIImage(named: "3")!))
+         arrayMemory.append(memory(images: UIImage(named: "3")!))
+         arrayMemory.append(memory(images: UIImage(named: "4")!))
          arrayMemory.append(memory(images: UIImage(named: "4")!))
          arrayMemory.append(memory(images: UIImage(named: "5")!))
-         arrayMemory.append(memory(images: UIImage(named: "6")!))
-         arrayMemory.append(memory(images: UIImage(named: "7")!))
-         arrayMemory.append(memory(images: UIImage(named: "8")!))
-         arrayMemory.append(memory(images: UIImage(named: "9")!))
-         arrayMemory.append(memory(images: UIImage(named: "10")!))
-        
-        arrayMemory.append(memory(images: UIImage(named: "1")!))
-        arrayMemory.append(memory(images: UIImage(named: "2")!))
-        arrayMemory.append(memory(images: UIImage(named: "3")!))
-        arrayMemory.append(memory(images: UIImage(named: "4")!))
-        arrayMemory.append(memory(images: UIImage(named: "5")!))
+         arrayMemory.append(memory(images: UIImage(named: "5")!))
+        arrayMemory.append(memory(images: UIImage(named: "6")!))
         arrayMemory.append(memory(images: UIImage(named: "6")!))
         arrayMemory.append(memory(images: UIImage(named: "7")!))
+        arrayMemory.append(memory(images: UIImage(named: "7")!))
+        arrayMemory.append(memory(images: UIImage(named: "8")!))
         arrayMemory.append(memory(images: UIImage(named: "8")!))
         arrayMemory.append(memory(images: UIImage(named: "9")!))
+        arrayMemory.append(memory(images: UIImage(named: "9")!))
         arrayMemory.append(memory(images: UIImage(named: "10")!))
+        arrayMemory.append(memory(images: UIImage(named: "10")!))
+        
+//        arrayMemory.append(memory(images: UIImage(named: "1")!))
+//        arrayMemory.append(memory(images: UIImage(named: "2")!))
+//        arrayMemory.append(memory(images: UIImage(named: "3")!))
+//        arrayMemory.append(memory(images: UIImage(named: "4")!))
+//        arrayMemory.append(memory(images: UIImage(named: "5")!))
+//        arrayMemory.append(memory(images: UIImage(named: "6")!))
+//        arrayMemory.append(memory(images: UIImage(named: "7")!))
+//        arrayMemory.append(memory(images: UIImage(named: "8")!))
+//        arrayMemory.append(memory(images: UIImage(named: "9")!))
+//        arrayMemory.append(memory(images: UIImage(named: "10")!))
         
         do{
         let audio = Bundle.main.path(forResource: "2", ofType: ".mp3")
@@ -156,12 +205,11 @@ class MemoryViewController: UIViewController, UICollectionViewDelegate, UICollec
    
     }
     
+    
     @IBAction func unwindToHome(_ sender: Any) {
         timerCount.invalidate()
         self.performSegue(withIdentifier: "unwindVC", sender: self)
     }
-  
-
 
     func counter()
     {
@@ -171,15 +219,76 @@ class MemoryViewController: UIViewController, UICollectionViewDelegate, UICollec
         {
             timerCount.invalidate()
             
-            let alert0 = UIAlertController(title: "Time is up!", message: "You scored ___", preferredStyle: .alert)
+            let alert0 = UIAlertController(title: "You lost!", message: "You scored \(scoreAdd). Want to play again?", preferredStyle: .alert)
             //                 alert0.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
-            alert0.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: { action in self.performSegue(withIdentifier: "unwindVC", sender: self)
+            alert0.addAction(UIAlertAction(title: "Yes", style: UIAlertActionStyle.cancel, handler: { action in self.performSegue(withIdentifier: "unwindToMemory", sender: self)
+            }))
+            alert0.addAction(UIAlertAction(title: "No", style: UIAlertActionStyle.default, handler: { action in self.performSegue(withIdentifier: "sortToHigh", sender: self)
             }))
             
             self.present(alert0, animated: true, completion: nil)
             
             audioPlayer.play()
         }
+        else
+        {
+        switch difficulty {
+        case "Easy":
+            if (scoreAdd >= 60)
+            {
+                timerCount.invalidate()
+                
+                let alert0 = UIAlertController(title: "Max Score!", message: "Good Job! Max Score for easy difficulty is 60. You scored a \(scoreAdd). Want to play again?", preferredStyle: .alert)
+                //                 alert0.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+                alert0.addAction(UIAlertAction(title: "Yes", style: UIAlertActionStyle.cancel, handler: { action in self.performSegue(withIdentifier: "unwindToMemory", sender: self)
+                }))
+                alert0.addAction(UIAlertAction(title: "No", style: UIAlertActionStyle.default, handler: { action in self.performSegue(withIdentifier: "sortToHigh", sender: self)
+                }))
+                
+                self.present(alert0, animated: true, completion: nil)
+                
+                audioPlayer.play()
+            }
+
+        case "Medium":
+            if (scoreAdd >= 80)
+            {
+                timerCount.invalidate()
+                
+                let alert0 = UIAlertController(title: "Max Score!", message: "Good Job! Max Score for medium difficulty 80. You scored a \(scoreAdd). Want to play again?", preferredStyle: .alert)
+                //                 alert0.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+                alert0.addAction(UIAlertAction(title: "Yes", style: UIAlertActionStyle.cancel, handler: { action in self.performSegue(withIdentifier: "unwindToMemory", sender: self)
+                }))
+                alert0.addAction(UIAlertAction(title: "No", style: UIAlertActionStyle.default, handler: { action in self.performSegue(withIdentifier: "sortToHigh", sender: self)
+                }))
+                
+                self.present(alert0, animated: true, completion: nil)
+                
+                audioPlayer.play()
+            }
+        
+       
+        case "Hard":
+            if (scoreAdd >= 100)
+            {
+                timerCount.invalidate()
+                
+                let alert0 = UIAlertController(title: "Max Score!", message: "Good Job! Max Score for hard difficulty is 100. You scored a \(scoreAdd). Want to play again?", preferredStyle: .alert)
+                //                 alert0.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+                alert0.addAction(UIAlertAction(title: "Yes", style: UIAlertActionStyle.cancel, handler: { action in self.performSegue(withIdentifier: "unwindToMemory", sender: self)
+                }))
+                alert0.addAction(UIAlertAction(title: "No", style: UIAlertActionStyle.default, handler: { action in self.performSegue(withIdentifier: "sortToHigh", sender: self)
+                }))
+                
+                self.present(alert0, animated: true, completion: nil)
+                
+                audioPlayer.play()
+            }
+           
+        default:
+            print("hello")
+        }
+           }
     }
 
     func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -213,7 +322,22 @@ class MemoryViewController: UIViewController, UICollectionViewDelegate, UICollec
         
         cell.foregroundImg.image = arrayMemory[indexPath.row].images
         
+        cell.backgroundImg.image = UIImage(named: "question")
+        
         return cell
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if (segue.identifier == "sortToHigh")
+        {
+            let memoryDest: HighScoresViewController = segue.destination as! HighScoresViewController
+            
+            print("SCORESS", scoreAdd)
+            memoryDest.scores = scoreAdd
+            memoryDest.nameOfGame = "Memory"
+            memoryDest.difficultyHigh = difficulty
+        }
+        
     }
 }
 

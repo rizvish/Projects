@@ -167,6 +167,7 @@
                             <constraint firstItem="px2-le-nAN" firstAttribute="centerX" secondItem="CIq-eA-gku" secondAttribute="centerX" id="y3w-y0-yli"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="VM1-qa-uqM"/>
                     <connections>
                         <outlet property="playGame" destination="Xp1-2r-2TF" id="57D-Mo-1ZI"/>
                     </connections>
@@ -413,6 +414,7 @@
                             <constraint firstItem="7TF-y8-ET0" firstAttribute="centerX" secondItem="5vO-V0-lKF" secondAttribute="centerX" id="zIK-Gv-VyJ"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="8J9-qS-l1r"/>
                     <connections>
                         <outlet property="playGame" destination="9sW-yE-8De" id="N6Q-wT-A7u"/>
                     </connections>
@@ -430,7 +432,7 @@
                         <viewControllerLayoutGuide type="bottom" id="Zyf-Bq-dSf"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Bq8-hn-MrW">
-                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <rect key="frame" x="0.0" y="64" width="667" height="311"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -439,6 +441,7 @@
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="zEt-dA-Tbi">
                                 <rect key="frame" x="20" y="7" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
                                 <state key="normal" title="Button" image="homeButton"/>
                                 <connections>
                                     <action selector="unwindFromBalloon:" destination="DSU-lc-XLg" eventType="touchUpInside" id="h87-97-6A1"/>
@@ -446,14 +449,17 @@
                             </button>
                         </barButtonItem>
                     </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                     <connections>
                         <segue destination="Zu4-rh-9SX" kind="unwind" identifier="unwindVC" unwindAction="unwindToMenuWithSegue:" id="N3E-PN-vxA"/>
+                        <segue destination="w3K-u4-fjs" kind="show" identifier="balloonToHigh" id="QjA-Hl-JUS"/>
+                        <segue destination="Zu4-rh-9SX" kind="unwind" identifier="unwindToBalloon" unwindAction="unwindToBallonWithSegue:" id="m8E-gg-DkM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="F1R-Wc-xWb" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="Zu4-rh-9SX" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="4639" y="2513"/>
+            <point key="canvasLocation" x="4638.5307346326845" y="2512.8000000000002"/>
         </scene>
         <!--Memory View Controller-->
         <scene sceneID="FUi-9n-DrG">
@@ -484,25 +490,19 @@
                                             <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView multipleTouchEnabled="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="question" translatesAutoresizingMaskIntoConstraints="NO" id="8dD-3W-11u">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uL3-x5-yUb">
                                                     <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tFh-8X-lf7">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oct-HA-jYB">
                                                     <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
                                             </subviews>
                                         </view>
-                                        <constraints>
-                                            <constraint firstItem="8dD-3W-11u" firstAttribute="leading" secondItem="sfE-CE-z47" secondAttribute="leading" id="PFG-FZ-heO"/>
-                                            <constraint firstAttribute="bottom" secondItem="8dD-3W-11u" secondAttribute="bottom" id="UY7-l9-Mrv"/>
-                                            <constraint firstItem="8dD-3W-11u" firstAttribute="centerY" secondItem="sfE-CE-z47" secondAttribute="centerY" id="X67-Pb-Acr"/>
-                                            <constraint firstItem="8dD-3W-11u" firstAttribute="centerX" secondItem="sfE-CE-z47" secondAttribute="centerX" id="c8P-4B-4sA"/>
-                                            <constraint firstItem="8dD-3W-11u" firstAttribute="top" secondItem="sfE-CE-z47" secondAttribute="top" id="diP-oC-c1b"/>
-                                            <constraint firstAttribute="trailing" secondItem="8dD-3W-11u" secondAttribute="trailing" id="lqd-cx-doR"/>
-                                        </constraints>
                                         <connections>
-                                            <outlet property="foregroundImg" destination="tFh-8X-lf7" id="wOi-mN-Zm5"/>
+                                            <outlet property="backgroundImg" destination="oct-HA-jYB" id="5dD-xs-XWY"/>
+                                            <outlet property="foregroundImg" destination="uL3-x5-yUb" id="4b4-hi-rsE"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -534,12 +534,14 @@
                     <connections>
                         <outlet property="collectionView" destination="vB9-jG-8FS" id="gza-Do-8T3"/>
                         <segue destination="FYb-hB-hvd" kind="unwind" identifier="unwindVC" unwindAction="unwindToMenuWithSegue:" id="50Y-2B-OKE"/>
+                        <segue destination="FYb-hB-hvd" kind="unwind" identifier="unwindToMemory" unwindAction="unwindToMemoryWithSegue:" id="hHe-hc-s6H"/>
+                        <segue destination="w3K-u4-fjs" kind="show" identifier="sortToHigh" id="pWN-we-g0e"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="or6-gJ-9AC" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="FYb-hB-hvd" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="4663" y="-991"/>
+            <point key="canvasLocation" x="4662.8185907046482" y="-991.20000000000005"/>
         </scene>
         <!--Memory Difficulty View Controller-->
         <scene sceneID="sFy-Ty-cVF">
@@ -621,6 +623,7 @@
                             <constraint firstItem="C1h-ZU-QOg" firstAttribute="centerX" secondItem="Bna-TY-Q2R" secondAttribute="centerX" id="wRV-dx-F9H"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="W0L-W0-LCg"/>
                     <connections>
                         <outlet property="playGame" destination="GsX-V1-NIp" id="uD7-oW-9Kp"/>
                     </connections>
@@ -639,11 +642,10 @@
         <image name="homeButton" width="130" height="130"/>
         <image name="medium" width="80" height="80"/>
         <image name="memory" width="100" height="100"/>
-        <image name="question" width="512" height="512"/>
         <image name="sorting-icon" width="133" height="100"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="Zby-hg-NqY"/>
-        <segue reference="RmN-hf-hw8"/>
+        <segue reference="QjA-Hl-JUS"/>
     </inferredMetricsTieBreakers>
 </document>

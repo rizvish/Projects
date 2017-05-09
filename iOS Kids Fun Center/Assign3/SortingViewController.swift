@@ -19,6 +19,8 @@ class SortingViewController: UIViewController {
         UIImage(named: "S2")!, UIImage(named: "S3")!, UIImage(named: "S4")!, UIImage(named: "S5")!, UIImage(named: "SS1")!, UIImage(named: "SS2")!, UIImage(named: "SS3")!, UIImage(named: "SS4")!, UIImage(named: "SS5")!, UIImage(named: "SL1")!, UIImage(named: "SL2")!, UIImage(named: "SL3")!, UIImage(named: "SL4")!, UIImage(named: "SL5")!
     ]
     
+    var rectangularAir: UIImageView? = nil
+    
     var seconds: Int = 0
     var score: Int = 0
     var timerCount = Timer()
@@ -88,6 +90,8 @@ class SortingViewController: UIViewController {
         self.view.backgroundColor = UIColor.cyan
         
         images.shuffle()
+        
+        rectangularAir = UIImageView(frame: CGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.height * 0.60))
         
 //        imageViewUhOH?.isUserInteractionEnabled = true
 //        imageViewUhOH1?.isUserInteractionEnabled = true
@@ -318,6 +322,7 @@ class SortingViewController: UIViewController {
                 score1.text = "\(score)"
             }
         }
+        audioPlayer.play()
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -669,7 +674,7 @@ class SortingViewController: UIViewController {
             timerCount.invalidate()
             
         
-            let alert0 = UIAlertController(title: "Time is up!", message: "You scored \(score). Want to play again?", preferredStyle: .alert)
+            let alert0 = UIAlertController(title: "You Lost!", message: "You scored \(score). Want to play again?", preferredStyle: .alert)
             //                 alert0.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
             alert0.addAction(UIAlertAction(title: "Yes", style: UIAlertActionStyle.cancel, handler: { action in self.performSegue(withIdentifier: "unwindToSorting", sender: self)
             }))
@@ -679,6 +684,62 @@ class SortingViewController: UIViewController {
             self.present(alert0, animated: true, completion: nil)
             
             audioPlayer.play()
+        }
+        else
+        {
+            switch difficulty {
+            case "Easy":
+                if (score >= 40)
+                {
+                    timerCount.invalidate()
+                    
+                    let alert0 = UIAlertController(title: "Max Score!", message: "Good Job! Max Score for easy difficulty is 40. You scored a \(score). Want to play again?", preferredStyle: .alert)
+                    //                 alert0.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+                    alert0.addAction(UIAlertAction(title: "Yes", style: UIAlertActionStyle.cancel, handler: { action in self.performSegue(withIdentifier: "unwindToSorting", sender: self)
+                    }))
+                    alert0.addAction(UIAlertAction(title: "No", style: UIAlertActionStyle.default, handler: { action in self.performSegue(withIdentifier: "sortToHigh", sender: self)
+                    }))
+                    
+                    self.present(alert0, animated: true, completion: nil)
+                    
+                    audioPlayer.play()
+                }
+            case "Medium":
+                if (score >= 50)
+                {
+                    timerCount.invalidate()
+                    
+                    let alert0 = UIAlertController(title: "Max Score!", message: "Good Job! Max Score for medium difficulty 50. You scored a \(score). Want to play again?", preferredStyle: .alert)
+                    //                 alert0.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+                    alert0.addAction(UIAlertAction(title: "Yes", style: UIAlertActionStyle.cancel, handler: { action in self.performSegue(withIdentifier: "unwindToSorting", sender: self)
+                    }))
+                    alert0.addAction(UIAlertAction(title: "No", style: UIAlertActionStyle.default, handler: { action in self.performSegue(withIdentifier: "sortToHigh", sender: self)
+                    }))
+                    
+                    self.present(alert0, animated: true, completion: nil)
+                    
+                    audioPlayer.play()
+                }
+            case "Hard":
+                if (score >= 60)
+                {
+                    timerCount.invalidate()
+                    
+                    let alert0 = UIAlertController(title: "Max Score!", message: "Good Job! Max Score is for hard difficulty is 60. You scored a \(score). Want to play again?", preferredStyle: .alert)
+                    //                 alert0.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+                    alert0.addAction(UIAlertAction(title: "Yes", style: UIAlertActionStyle.cancel, handler: { action in self.performSegue(withIdentifier: "unwindToSorting", sender: self)
+                    }))
+                    alert0.addAction(UIAlertAction(title: "No", style: UIAlertActionStyle.default, handler: { action in self.performSegue(withIdentifier: "sortToHigh", sender: self)
+                    }))
+                    
+                    self.present(alert0, animated: true, completion: nil)
+                    
+                    audioPlayer.play()
+                }
+                
+            default:
+                print("hello")
+            }
         }
     }
     

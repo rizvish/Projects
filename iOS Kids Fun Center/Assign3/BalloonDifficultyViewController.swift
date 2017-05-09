@@ -16,7 +16,7 @@ class BalloonDifficultyViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationController?.title = "Balloon Game"
+        self.navigationItem.title = "Balloon Game"
 
         let backgroundImg = UIImage(named: "download")
         view.backgroundColor = UIColor(patternImage: backgroundImg!)
@@ -24,6 +24,12 @@ class BalloonDifficultyViewController: UIViewController {
         playGame?.isHidden = true
         
     }
+    @IBAction func unwindToBallon(segue: UIStoryboardSegue)
+    {
+        
+        
+    }
+
     @IBAction func easyBalloon(_ sender: Any) {
         playGame?.isHidden = false
         
