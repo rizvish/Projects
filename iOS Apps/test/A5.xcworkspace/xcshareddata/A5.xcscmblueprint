@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "7E3B95C160E43D3A3668AADFF6336EAFCF003FAA",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "7E3B95C160E43D3A3668AADFF6336EAFCF003FAA" : 9223372036854775807,
+    "F941BEF4D9F47C7EC4B7FA36EB6A397330D2A9EE" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "057A2E1D-1A14-45BE-AB2B-AF412DAF76BF",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "7E3B95C160E43D3A3668AADFF6336EAFCF003FAA" : "CMSC491\/",
+    "F941BEF4D9F47C7EC4B7FA36EB6A397330D2A9EE" : ".."
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "A5",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "A5.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/rizvish\/CMSC491.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "7E3B95C160E43D3A3668AADFF6336EAFCF003FAA"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/rizvish\/Projects.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "F941BEF4D9F47C7EC4B7FA36EB6A397330D2A9EE"
+    }
+  ]
+}
