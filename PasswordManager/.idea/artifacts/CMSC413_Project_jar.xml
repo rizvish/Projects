@@ -1,0 +1,24 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="CMSC413_Project:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/CMSC413_Project_jar</output-path>
+    <root id="archive" name="CMSC413_Project.jar">
+      <element id="module-output" name="CMSC413_Project" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/lib/bcprov-ext-jdk15on-156.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/lib/h2-1.4.194.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/lib/icu4j-3.4.4.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/lib/jasypt-1.9.2.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/lib/jasypt-1.9.2-lite.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/lib/jasypt-acegisecurity-1.9.2.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/lib/jasypt-hibernate3-1.9.2.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/lib/jasypt-hibernate4-1.9.2.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/lib/jasypt-spring2-1.9.2.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/lib/jasypt-spring3-1.9.2.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/lib/jasypt-spring31-1.9.2.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/lib/jasypt-springsecurity2-1.9.2.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/lib/jasypt-springsecurity3-1.9.2.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/lib/jasypt-wicket13-1.9.2.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/lib/jasypt-wicket15-1.9.2.jar" path-in-jar="/" />
+      <element id="library" level="project" name="bcprov-ext-jdk15on-156 (2)" />
+    </root>
+  </artifact>
+</component>

@@ -1,0 +1,45 @@
+<component name="libraryTable">
+  <library name="icu4j-3.4.4">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/icu4j-3.4.4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jasypt-1.9.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jasypt-1.9.2-lite.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jasypt-acegisecurity-1.9.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jasypt-hibernate3-1.9.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jasypt-hibernate4-1.9.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jasypt-spring2-1.9.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jasypt-spring3-1.9.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jasypt-spring31-1.9.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jasypt-springsecurity2-1.9.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jasypt-springsecurity3-1.9.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jasypt-wicket13-1.9.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jasypt-wicket15-1.9.2.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$PROJECT_DIR$/lib/jasypt-1.9.2-javadoc.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jasypt-acegisecurity-1.9.2-javadoc.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jasypt-hibernate3-1.9.2-javadoc.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jasypt-hibernate4-1.9.2-javadoc.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jasypt-spring2-1.9.2-javadoc.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jasypt-spring3-1.9.2-javadoc.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jasypt-spring31-1.9.2-javadoc.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jasypt-springsecurity2-1.9.2-javadoc.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jasypt-springsecurity3-1.9.2-javadoc.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jasypt-wicket13-1.9.2-javadoc.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jasypt-wicket15-1.9.2-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/lib/jasypt-1.9.2-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jasypt-acegisecurity-1.9.2-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jasypt-hibernate3-1.9.2-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jasypt-hibernate4-1.9.2-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jasypt-spring2-1.9.2-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jasypt-spring3-1.9.2-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jasypt-spring31-1.9.2-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jasypt-springsecurity2-1.9.2-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jasypt-springsecurity3-1.9.2-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jasypt-wicket13-1.9.2-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jasypt-wicket15-1.9.2-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

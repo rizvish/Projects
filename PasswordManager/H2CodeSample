@@ -1,0 +1,19 @@
+// Sample code for adding/retrieving from the H2 database
+        try {
+            Class.forName("org.h2.Driver");
+            Connection connection = DriverManager.getConnection("jdbc:h2:~/test", "test", "");
+            Statement statement = connection.createStatement();
+            //statement.executeUpdate("CREATE TABLE table1 (user varchar(50))");
+            statement.executeUpdate("INSERT INTO table1 (user) VALUES ('Claudio')");
+            statement.executeUpdate("INSERT INTO table1 (user) VALUES ('Bernasconi')");
+            ResultSet rs = statement.executeQuery("SELECT * FROM table1");
+            while (rs.next()) {
+                String name = rs.getString("user");
+                System.out.println(name);
+            }
+            statement.close();
+            connection.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        // End StartScreen code

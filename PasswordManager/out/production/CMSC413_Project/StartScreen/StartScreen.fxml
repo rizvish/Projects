@@ -1,0 +1,40 @@
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.PasswordField?>
+
+<GridPane fx:controller="StartScreen.SSController" fx:id="root"
+          xmlns:fx="http://javafx.com/fxml" alignment="center" hgap="10" vgap="10">
+
+    <Text text="Username:"
+          GridPane.columnIndex="0" GridPane.rowIndex="0"
+          GridPane.columnSpan="1">
+    </Text>
+
+    <TextField fx:id="usernameInput"
+               GridPane.columnIndex="1" GridPane.rowIndex="0"
+               GridPane.columnSpan="1" onKeyPressed="#handleKeyPressed">
+    </TextField>
+
+    <Text text="Password:"
+          GridPane.columnIndex="0" GridPane.rowIndex="1"
+          GridPane.columnSpan="1">
+    </Text>
+
+    <PasswordField fx:id="passwordInput"
+               GridPane.columnIndex="1" GridPane.rowIndex="1"
+               GridPane.columnSpan="1" onKeyPressed="#handleKeyPressed">
+    </PasswordField>
+
+    <HBox
+        spacing="10" alignment="BOTTOM_CENTER"
+        GridPane.columnIndex="1" GridPane.rowIndex="2"
+        GridPane.columnSpan="1">
+        <Button fx:id="loginButton" text="Login" prefWidth="150"
+        onAction="#handleLoginButtonAction">
+        </Button>
+    </HBox>
+
+</GridPane>
