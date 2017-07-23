@@ -16,6 +16,9 @@ File Placement - %JAVA_HOME%/jre/lib/security and %JAVA_HOME%/jdk/jre/lib/securi
 # Run Instruction
 
 Install the latest version of Java
+
 Install JCE Unlimited Strength Jurisdiction Policy Files into Java Installation
+
 Download IntelliJ IDE
+
 Open project in IntelliJ, and run
